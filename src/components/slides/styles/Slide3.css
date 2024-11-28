@@ -1,0 +1,147 @@
+.slide3 {
+    background: radial-gradient(
+            circle at 1% 40%,
+            rgba(252, 109, 169, 0.74),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 26% 10%, 
+            #a3e0fd, 
+            transparent 40%
+        );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #fcfcfc; 
+    position: relative;
+    overflow: hidden;
+}
+.slide3::before,
+.slide3::after {
+    content: "";
+    z-index: 1;
+}
+/*  */
+.bottle-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    margin-left: 25%;
+    z-index: 1000;
+}
+.bottle-image {
+    width: 350px;
+    align-self: flex-end;
+}
+/*  */
+.slide-text-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10%;
+}
+.slide-title {
+    font-size: 26px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 7px;
+}
+.slide-main-title {
+    font-size: 86px;
+    font-weight: 400;
+    margin: 7px 0;
+    letter-spacing: 8px;
+}
+.card-container {
+    display: flex;
+    margin: 15px 0;
+
+    gap: 20px;
+    z-index: 2;
+}
+.card {
+    border-radius: 10px;
+    width: 320px;
+    margin: 10px;
+}
+.icon {
+    width: 72px;
+}
+.card p {
+    font-size: 22px;
+    margin-top: 10px;
+    padding: 10px;
+}
+/*  */
+.bg-left-cont {
+    position: absolute;
+    width: 600px;
+    height: 265px;
+    top: 54%;
+    left: 38%;
+    border-radius: 40px;
+    box-shadow: 0 2px 25px rgba(150, 149, 149, 0.164);
+    background-color: white;
+}
+.bg-right-cont {
+    position: absolute;
+    width: 295px;
+    height: 165px;
+    top: 54%;
+    right: 12%;
+    border-radius: 40px;
+    box-shadow: 0 2px 25px rgba(150, 149, 149, 0.164);
+    background-color: white;
+}
+.cont-btn-card .card {
+    margin-left: 18%;
+}
+.details-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 9%;
+    margin-left: 2%;
+    width: 75%;
+}
+.details-button img {
+    width: 70%;
+}
+/*  */
+.modal-open {
+    transition: background-color 0.8s ease, color 0.3s ease;
+    background-color: rgba(49, 90, 120, 0.8);
+    overflow: hidden;
+}
+
+
+@media all and (max-width: 1050px) {
+    .bottle-image-container {       
+        margin-left: 1%;
+    }
+    .bottle-image {
+        width: 310px;
+    }
+    .bg-left-cont {
+        width: 440px;
+        height: 265px;
+        top: 50%;
+        left: 18%;
+    }
+    .bg-right-cont {
+        width: 255px;
+        height: 155px;
+        top: 50%;
+        right: 10%;
+    }
+    .details-button {
+        margin-top: 9%;
+        margin-left: 6%;
+        width: 75%;
+    }
+    .details-button img {
+        width: 85%;
+    }
+}

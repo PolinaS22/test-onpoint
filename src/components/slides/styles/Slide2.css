@@ -1,0 +1,169 @@
+.slide2 {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  background-image: url("../../images/bg.png");
+  background-size: cover;
+}
+
+.slide2-header-container {
+  position: absolute;
+  top: 18%; 
+  left: 7%;
+}
+
+.slide2-header {
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #363636;
+  margin: 0;
+  text-align: start;
+  line-height: 1.5;
+}
+
+.slide2-content {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-top: 50px; 
+}
+
+.text-box {
+  width: 74%;
+  height: 55%; 
+  overflow-y: auto;
+  padding-left: 50px;
+  border-radius: 15px;
+  line-height: 1.6;
+  font-size: 20px;
+  z-index: 2; 
+  text-align: justify;
+  margin-left: 7.5%;
+  margin-top: 6%;
+  position: relative;
+}
+
+.par-message {
+  background-color: #fdfdfd;
+  padding: 35px;
+  border-radius: 40px;
+}
+
+.par-message p {
+  margin: 0;
+}
+
+.text-box::-webkit-scrollbar {
+  width: 10px; 
+}
+
+.text-box::-webkit-scrollbar-track {
+  background: rgb(70, 70, 70);
+  border-radius: 10px;
+  margin-block: 10px 0; 
+}
+
+.text-box::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+      145deg,
+      #d46798,
+      #d46798
+  );
+  border-radius: 50px; 
+  box-shadow: inset 2px 2px 4px rgba(255, 254, 254, 0.719),
+                    2px 2px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.text-box {
+  direction: rtl; 
+}
+.text-box p {
+  direction: ltr; 
+}
+
+.slide2::before,
+.slide2::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1; 
+  opacity: 0.3; 
+}
+
+.worms-container {
+  z-index: 1; 
+}
+
+.worm {
+  background-image: url("../../images/pink_sperm_1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: blur(0px);
+  transform: rotate(28deg) scale(0.8);
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.4s ease; 
+}
+.worm.visible {
+  transform: rotate(28deg) scale(1); 
+  opacity: 1;
+}
+
+.worm-1 {
+  top: 32%;
+  left: 25%;
+  width: 950px;
+  height: 320px;
+  transition-delay: 0.5s; 
+}
+
+.worm-2 {
+  top: 28%;
+  left: 53%;
+  width: 750px;
+  height: 200px;
+  filter: blur(1px);
+  transition-delay: 0.7s;
+}
+
+.worm-3 {
+  top: 20%;
+  left: 72%;
+  width: 400px;
+  height: 200px;
+  filter: blur(1px);
+  transition-delay: 0.9s;
+}
+
+.worm-4 {
+  top: 70%;
+  left: 80%;
+  width: 650px;
+  height: 200px;
+  transition-delay: 1.1s;
+}
+
+.worm-5 {
+  top: 80%;
+  left: 85%;
+  width: 260px;
+  height: 50px;
+  filter: blur(2px);
+  transition-delay: 1.3s;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

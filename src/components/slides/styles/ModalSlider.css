@@ -1,0 +1,97 @@
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+/*  */
+.modal-container {
+    background: white;
+    border-radius: 40px;
+    padding: 30px;
+    margin-left: 29.5%;
+    margin-top: 8.5%;
+    width: 55%;
+    height: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1001 !important;
+}
+/*  */
+.modal-content {
+    z-index: 1001 !important;
+    margin-left: 23.5%;
+    margin-top: 0.9%;
+    height: 400px;
+}
+.modal-close {
+    position: absolute;
+    top: 38px;
+    right: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.modal-close img {
+    width: 27px;
+}
+.advantage-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.advantage-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8cc9e8;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.advantage-text {
+    font-size: 22px;
+    width: 85%;
+    margin: 0;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+}
+.dots {
+    display: flex;
+    justify-content: center;
+}
+.dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    padding: 0;
+}
+.dot.active {
+    background-color: #fc6da9;
+    border: none;
+}
+.dot:hover {
+    border-color: #888;
+}
+
+
+@media all and (max-width: 1050px) {
+    .modal-container {
+        margin-left: 5%;
+        margin-top: 10%;
+        width: 75%;
+        height: 500px;
+    }
+}
