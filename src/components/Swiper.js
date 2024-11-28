@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Slide1 from "./slides/Slide1";
 import Slide2 from "./slides/Slide2";
 import Slide3 from "./slides/Slide3";
@@ -13,12 +13,16 @@ export const Swiper = () => {
     <Slide2 key="2" isActive={currentSlide === 1} />,
     <Slide3 key="3" />,
   ];
+
   const goToFirstSlide = () => {
     setCurrentSlide(0); 
   };
-  const handleNextSlide = () => {
+  const handleNextSlide = useCallback(() => {
     setCurrentSlide((prev) => Math.min(prev + 1, slides.length - 1));
-  };
+  }, [slides.length]);
+  const handlePrevSlide = useCallback(() => {
+    setCurrentSlide((prev) => Math.max(prev - 1, 0));
+  }, []);
 
   const handleSwipe = (e) => {
     const startTouch = e.touches[0].clientX;
@@ -34,6 +38,20 @@ export const Swiper = () => {
     };
     document.addEventListener("touchend", onEndTouch);
   };
+
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (event.key === "ArrowRight") {
+        handleNextSlide(); 
+      } else if (event.key === "ArrowLeft") {
+        handlePrevSlide(); 
+      }
+    };
+    window.addEventListener("keydown", handleKeyPress);
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [handleNextSlide, handlePrevSlide]);
 
   return (
     <div
